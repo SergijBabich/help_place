@@ -1,0 +1,7 @@
+.form_control.error input,
+ .form_control.error textarea {
+ border: 2px solid #ec6d6d;
+ }
+ .form_control.error span {
+   color: #f34511;
+ }

@@ -1,0 +1,105 @@
+.selected__page {
+  font-weight: bold;
+  background-color: #2ba2e2;
+}
+.users__wrapper {
+  width: 70%;
+  margin: auto;
+}
+.users__container {
+ min-width: 300px;
+ width: 300px;
+ display: flex;
+ justify-content: space-around;
+ border-radius:20px;
+ background-color: #f1f1f1;
+ margin-top: 20px;
+ transition: 0.2s;
+}
+.users__container:hover {
+  box-shadow: 0 0 10px #1a73e8;
+  transition: 0.2s;
+}
+.container__img {
+ width: 100px;
+}
+.container__img img {
+ width: inherit;
+ border-radius: 50%;
+}
+.container__info {
+ width: 50%;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+}
+.container__name {
+ display: flex;
+ flex-direction: row;
+}
+.container__name span {
+ margin-right: 5px;
+ color: #adadad;
+}
+.login_user {
+ font-size: 17px;
+ font-family: Verdana, Geneva, sans-serif;
+ font-weight: 520;
+}
+.container__lvl {
+ font-size: 14px;
+ height: 40px;
+ display: flex;
+ align-items: flex-end;
+ font-family: Verdana, Geneva, sans-serif;
+ font-weight: 520;
+}
+.paginator_container {
+  width: 100%;
+  height: 100px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.paginator_container  span {
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  border: 1px solid #b7b7b7;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: 520;
+}
+.paginator_container button {
+  width: 70px;
+  height: 30px;
+  cursor: pointer;
+  text-decoration: none; /* убирать подчёркивание у ссылок */
+  user-select: none; /* убирать выделение текста */
+  outline: none; /* убирать контур в Mozilla */
+  font-size: 17px;
+  background-color: #eaeaea;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: 520;
+}
+.paginator_container .paginator_button {
+  border: 14px solid transparent;
+  border-left: 34px solid #2ba2e2;
+  margin-left: 5px;
+}
+.paginator_container .paginator_button_rigth {
+  border: 14px solid transparent;
+  border-right: 34px solid #2ba2e2;
+  margin-right: 5px;
+}
+
+@media (max-width: 480px) {
+  .users__wrapper {
+    position: relative;
+    z-index: 1;
+    width: 100%
+  }
+}
