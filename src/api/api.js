@@ -4,9 +4,10 @@ import * as axios from 'axios';
 
 const instance = axios.create({
     withCredentials: true,
-    baseURL: 'http://localhost:3012/',
+    baseURL: 'https://warm-cove-14456.herokuapp.com/',
 
 });
+//http://localhost:3012/
 export const putTask = {
     createNewTask(name, descValue, checkbo, sity, phone) {
         return instance.post(`clients`, {
