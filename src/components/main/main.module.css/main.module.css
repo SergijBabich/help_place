@@ -181,7 +181,7 @@
   }
   /* Изменение фона кнопки при наведении */
   .button:hover{
-    opacity: 90%;
+    background-color: #aeea5a;
   }
 .button__items {
     display: flex;

@@ -102,7 +102,7 @@ th {
     cursor: pointer;
 }
 .button_update:hover {
-    opacity: 90%;
+    background-color: #aeea5a;
 }
 form {
     text-align: center;
