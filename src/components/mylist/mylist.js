@@ -5,7 +5,7 @@ import {sity} from '../../utils/sity';
 const MyList = (props) => {
 
        let JSONStringListId  =  props.myTaskId.toString();
-       console.log(sity)
+       console.log(JSONStringListId)
       const handleChange = () => {
             
             props.getMyListTask(JSONStringListId);    
@@ -65,7 +65,7 @@ const MyListItems = (props) => {
               <div className={h.table__container}>
                 <div className={h.table_items}>
                      <table  border-buttom="1">
-                            <caption>Закажчик</caption>                
+                            <caption>Заказчик</caption>                
                             <tr>
                                    <th>Имя</th>
                                    <td>{props.el.name}</td>

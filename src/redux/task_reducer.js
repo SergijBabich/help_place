@@ -56,9 +56,9 @@ const taskReducer = (state = initialState, action) => {
           myListTask:  action.data
         }
           case GET_MY_LIST_ID:
-          let name = action.name;
+          let id = action._id;
         return {
-          ...state,  myTaskId: [...state.myTaskId,  name],
+          ...state,  myTaskId: [...state.myTaskId,  id],
         }
             default:
           return state;
@@ -83,10 +83,10 @@ const getmyTaskList = (data) => {
 }
 
 
-const getMyListId = (name) => {
+const getMyListId = (_id) => {
   return {
     type: GET_MY_LIST_ID,
-    name
+    _id
   }
 }
 
@@ -94,13 +94,14 @@ const getMyListId = (name) => {
 export const createTask = (name, descValue, checkbo, sity, phone) => {
   return  async (dispatch) => {
    let data = await putTask.createNewTask(name, descValue, checkbo, sity, phone );
-   dispatch(getMyListId(data.name));
+   dispatch(getMyListId(data._id));
    console.log(data); 
    
   }
 }
 
 export const getMyListTask = (JSONStringListId) => {
+  console.log(JSONStringListId)
   return  async (dispatch) => {
 
    let data = await putTask.getMyListTask(JSONStringListId);

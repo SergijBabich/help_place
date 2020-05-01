@@ -8,6 +8,7 @@ const instance = axios.create({
 
 });
 //http://localhost:3012/
+//https://warm-cove-14456.herokuapp.com/
 export const putTask = {
     createNewTask(name, descValue, checkbo, sity, phone) {
         return instance.post(`clients`, {
@@ -40,7 +41,7 @@ export const putTask = {
     getMyListTask(JSONStringListId) {
         console.log(JSONStringListId);
         
-        return instance.get(`/get-my-list?name=${JSONStringListId}` , {
+        return instance.get(`/get-my-list?id=${JSONStringListId}` , {
             JSONStringListId    
         }).then(response => {
             console.log(response);
