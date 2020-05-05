@@ -1,7 +1,7 @@
 import React from 'react';
 import h from './history.module.css'
 const History = (props) => {
-       let showMyTask =   props.myTask.reverce().map( el => {
+       let showMyTask =   props.myTask.reverse().map( el => {
                      return <HistoryItems   el={el}/>
               })
              
