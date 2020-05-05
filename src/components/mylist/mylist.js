@@ -5,14 +5,13 @@ import {sity} from '../../utils/sity';
 const MyList = (props) => {
 
        let JSONStringListId  =  props.myTaskId.toString();
-       console.log(JSONStringListId)
+
       const handleChange = () => {
             
             props.getMyListTask(JSONStringListId);    
      
 
        }
-       console.log(props)
        /* можно переписать все через функкомноненту нужно делать обработчик и почсле того покгда сработал он, пришли пропсы их отфильтровать и отобразить!"*/ 
     const handleSubmit = (event) => {
               event.preventDefault();
@@ -46,7 +45,6 @@ const MyList = (props) => {
 
 
 const MyListItems = (props) => {
-  console.log(props)
       const  giveStateToCloseFunction = () => {
               props.closeTask(props.el._id)
        }

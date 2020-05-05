@@ -4,8 +4,6 @@ import {NavLink} from 'react-router-dom';
 import h from './header.module.css';
 import MyList from '..//mylist/mylist'
  const Header = (props)=> {
-     console.log(props.myTask);
-     
     return (
         <div className={h.container}>
 

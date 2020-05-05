@@ -10,7 +10,6 @@ import {Input, Textarea} from '../../utils/formControl.js';
 import {sity} from '../../utils/sity';     
 import { createNumberMask, createTextMask } from 'redux-form-input-masks';
 const Main = (props)=> {
-console.log(props);
 
     
     const [isActive, setActive] = useState(false);
@@ -18,7 +17,7 @@ console.log(props);
         setActive(true)
     }
     const getTaskFromUser = (value) => {
-           props.createTask(value.name, value.descValue, value.checkbo, value.sity, value.phone);    
+           props.createTask(value.name.trim(), value.descValue.trim(), value.checkbo, value.sity, value.phone);
            setActive(false)        
         }
 
@@ -48,7 +47,7 @@ console.log(props);
 
 const maxLengthTextAtea = maxLengthCreator(256);
 const maxLengthInput = maxLengthCreator(15);
-
+const minLengthPhone = minLengthCreator(9);
 
 const Task = (props)=> {   
     const phoneMask = createTextMask({
@@ -61,6 +60,7 @@ const Task = (props)=> {
           be.push(element.name);
     })
     let ka = be.sort();
+    /* добавить нормальные названия переменных  */
    return (
        <div className={main.container__field} >
          <form  className={main.form__createtask} onSubmit = {props.handleSubmit}>
@@ -83,7 +83,7 @@ const Task = (props)=> {
                             })
                             }
                     </Field>   
-                        <Field component={Input}   {...phoneMask}  class={main.textbox}   validate={[required]}   name='phone' placeholder='Введите ваш номер леефона' />   
+                        <Field component={Input}   {...phoneMask}  class={main.textbox}   validate={[required, minLengthPhone]}   name='phone' placeholder='Введите ваш номер леефона' />   
                    </div>
                    <div className="container-area">
                         <div>

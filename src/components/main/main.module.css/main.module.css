@@ -155,6 +155,7 @@
       display:block;
       padding:10px;
       overflow:hidden;
+      resize:none;
   }
   .pay__checker {
       display: flex;

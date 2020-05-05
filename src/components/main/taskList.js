@@ -9,8 +9,7 @@ const TaskList = (props)=> {
         setTake(true)
     }
     const collectExecutorInformation = (value) => {
-       
-        props.appointAnExecutor(value.nameExecutor, value.surnameExecutor, value.phoneExecutor, value.executionTime, value.commentExecutor, props.taskList._id);
+        props.appointAnExecutor(value.nameExecutor.trim(), value.surnameExecutor.trim(), value.phoneExecutor, value.executionTime, value.commentExecutor.trim(), props.taskList._id);
         setTake(false)     
     }
    

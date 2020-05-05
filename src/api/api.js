@@ -17,8 +17,7 @@ export const putTask = {
             checkbo,
             sity,
             phone
-        }).then(response => {
-            console.log(response.data);      
+        }).then(response => {   
             return response.data;
         })
     },
@@ -31,21 +30,15 @@ export const putTask = {
             phoneExecutor,
             executionTime,
             commentExecutor
-        }).then(response => {
-            console.log(response.data);
-            
+        }).then(response => {        
             return response.data;
         })
     },
     /* get all  my task list  */
     getMyListTask(JSONStringListId) {
-        console.log(JSONStringListId);
-        
         return instance.get(`/get-my-list?id=${JSONStringListId}` , {
             JSONStringListId    
-        }).then(response => {
-            console.log(response);
-            
+        }).then(response => {            
             return response.data;
         });
 
@@ -66,7 +59,6 @@ export const getUserTask = {
 
     
     getItems(page) {
-        console.log(page);
         return instance.get(`/clients?pageCount=${10}&page=${page}`, {
             page
         }).then(response => {
