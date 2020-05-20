@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import t from '../main/main.module.css/main.module.css';
 import us from './paginator.module.css'
 import TakeTaskModalWindowRedux from '../takeTaskDo/takeTaskModalWindow'
+import ShowMyTaskListInTheMain from '../main/showMyTaskListInTheMain '
 import TaskList  from '../main/taskList';
 const Paginator = (props) =>  {
 
@@ -19,13 +20,23 @@ const Paginator = (props) =>  {
     if (props.users.phoneExecutor) {
       props.getItems(1, 10);
   }
-    
-        
+
+  let newTaskList=  props.users.filter(o => !props._id.some(oo => o._id === oo));
+  let showMyTaskList=  props.users.filter(o => props._id.some(oo => o._id === oo));
+ 
+ 
+        console.log(showMyTaskList)
      return (
         <div>
-        {props.users.map(u =>
+        {newTaskList.map((u, index) =>
           <div class=''>
-              <TaskList  taskList = {u}  getItems={props.getItems} appointAnExecutor={props.appointAnExecutor}/>
+              <TaskList  taskList = {u} index={index} _id={props._id} getItems={props.getItems} appointAnExecutor={props.appointAnExecutor}/>
+         </div>
+      )}
+
+     {showMyTaskList.map((u, index) =>
+          <div class=''>
+              <ShowMyTaskListInTheMain  taskList = {u} index={index} _id={props._id} getItems={props.getItems} appointAnExecutor={props.appointAnExecutor}/>
          </div>
       )}
       <div className={us.paginator_container}>

@@ -16,7 +16,8 @@ const TaskList = (props)=> {
     const canceltakeTaskToDo = () => {
         setTake(false)
     }
-    
+
+  
 
    return (
        <>
@@ -40,11 +41,9 @@ const TaskList = (props)=> {
                 <div className={t.info_right_side}>
                     <div>
                          {props.taskList.nameExecutor? <div className={t.check__ready_color}> В процессе выполения</div>:
-                      <div>
-                        <button  className={t.button_take} onClick={takeTaskToDo}>Помочь</button>
-                      </div> }
+                            <button  className={t.button_take} onClick={takeTaskToDo}>Помочь</button>}
                     </div>
-                   
+                  
                     <div className={t.info__pay}>
                         <p className={t.items_color} >Вознаграждение</p>
                         {props.taskList.checkPay? <p className={t.check__pay_color}> Бесплатно </p>: <p className={t.check__pay_color}>Платно</p> }

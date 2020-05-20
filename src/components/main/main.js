@@ -60,7 +60,7 @@ const Task = (props)=> {
           be.push(element.name);
     })
     let ka = be.sort();
-    /* добавить нормальные названия переменных  */
+    /* добавить нормальные названия переменных   */
    return (
        <div className={main.container__field} >
          <form  className={main.form__createtask} onSubmit = {props.handleSubmit}>

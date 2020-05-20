@@ -6,7 +6,7 @@ import {setCurrentPage} from '../../redux/items_reducer.js';
 import {setCurrentPageNumber}  from '../../redux/items_reducer.js'; 
 import Items from './items.js';
 import { appointAnExecutor} from '../../redux/task_reducer'
-
+import taskReducer from '../../redux/task_reducer'
 class ItemsAPIComponent extends React.Component  {
 
   componentDidMount(){
@@ -23,6 +23,7 @@ class ItemsAPIComponent extends React.Component  {
              totalUsersCount={this.props.totalUsersCount}
              getItems = {this.props.getItems}
              appointAnExecutor={this.props.appointAnExecutor}
+             _id = {this.props._id}
                         />
       </>
   )
@@ -36,6 +37,7 @@ let mapStateToProps = (state) => {
     page:state.items.page,
     pageCount: state.items.pageCount,
     totalUsersCount:state.items.totalUsersCount,
+    _id:state.task.myTaskId
     
   }
 }

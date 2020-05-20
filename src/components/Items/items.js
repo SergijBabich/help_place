@@ -1,6 +1,7 @@
 import React from 'react';
 import Paginator from './paginator.js';
 const Items = (props) => {
+
     let pagesCount = Math.ceil(props.totalUsersCount / props.page);
     let pages = [];
     for (let i = 0; i <= pagesCount; i++) {
@@ -15,7 +16,9 @@ const Items = (props) => {
                pageCount={props.pageCount}
                totalUsersCount={props.totalUsersCount}
                getItems = {props.getItems}
-               appointAnExecutor={props.appointAnExecutor} />
+               appointAnExecutor={props.appointAnExecutor}
+               _id ={props._id}
+                />
         </div>
     </div>
   )
